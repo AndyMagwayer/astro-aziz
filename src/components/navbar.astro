@@ -1,0 +1,64 @@
+---
+import LogoIcon from "../assets/icons/logo-icon.svg";
+---
+
+<header class="navbar">
+    <div class="container">
+        <div class="logo">
+            <img src={LogoIcon} alt="logo" />
+        </div>
+
+        <nav class="nav">
+            <ul class="menu">
+                <li class="menu-item"><a href="" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Blog</a></li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">About Us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Contact us</a>
+                </li>
+            </ul>
+
+            <button class="action">Subscribe</button>
+        </nav>
+    </div>
+</header>
+
+<style lang="scss">
+    @import "../assets/styles/variables.scss";
+
+    .navbar {
+        background-color: $secondary;
+        color: #fff;
+        padding: 12px 0;
+
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .nav {
+                display: flex;
+                align-items: center;
+                gap: 32px;
+
+                .menu {
+                    display: flex;
+                    gap: 24px;
+
+                    .menu-link {
+                        color: #fff;
+                    }
+                }
+
+                .action {
+                    font-size: 18px;
+                    font-weight: 700;
+                    background: #fff;
+                    padding: 16px 48px;
+                }
+            }
+        }
+    }
+</style>
