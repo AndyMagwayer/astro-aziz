@@ -1,0 +1,146 @@
+---
+import logo from "../assets/icons/logo-icon.svg";
+import TheButton from "./the-button.astro";
+---
+
+<footer class="footer">
+    <div class="container">
+        <!-- top-nav -->
+        <div class="top-nav">
+            <div class="logo">
+                <img src={logo} alt="" class="logo-image" />
+            </div>
+
+            <ul class="menu">
+                <li class="menu-item"><a href="" class="menu-link">Home</a></li>
+                <li class="menu-item"><a href="" class="menu-link">Blog</a></li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">About us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Contact us</a>
+                </li>
+                <li class="menu-item">
+                    <a href="" class="menu-link">Privacy Policy</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- footer-form -->
+
+        <div class="footer-form">
+            <div class="content">
+                <h2 class="title">
+                    Subscribe to our news letter to get latest updates and news
+                </h2>
+            </div>
+
+            <form class="form">
+                <input type="text" placeholder="Enter Your Email" />
+                <TheButton>Subscribe</TheButton>
+            </form>
+        </div>
+
+        <!-- context -->
+        <div class="context">
+            <div class="copyright">
+                <p class="text">Finstreet 118 2561 Fintown</p>
+                <p class="text">Hello@finsweet.com 020 7993 2905</p>
+            </div>
+
+            <div class="sci">
+                <a href="" class="sci-link">
+                    <i class="fab fa-facebook"></i>
+                </a>
+
+                <a href="" class="sci-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+
+                <a href="" class="sci-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="" class="sci-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style lang="scss">
+    @import "../assets/styles/variables.scss";
+    .footer {
+        background-color: $secondary;
+        color: #fff;
+        padding: 60px;
+
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .menu {
+                display: flex;
+                gap: 24px;
+
+                .menu-link {
+                    color: #fff;
+                }
+            }
+        }
+
+        .footer-form {
+            background-color: rgba(255, 255, 255, 0.05);
+            padding: 80px 64px;
+            margin: 50px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .content {
+                max-width: 562px;
+
+                .title {
+                    line-height: 48px;
+                }
+            }
+
+            .form {
+                display: flex;
+                gap: 24px;
+
+                input {
+                    width: 323px;
+                    background-color: transparent;
+                    border:1px solid $gray-500 ;
+                    padding: 14px 25px;
+                    color: #fff;
+                }
+            }
+        }
+
+        .context{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .copyright{
+                color:rgba(255,255,255,0.7);
+
+            }
+
+            .sci{
+                display: flex;
+                gap: 27px;
+
+
+                .sci-link{
+                    color:rgba(255,255,255,0.7);
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+</style>
