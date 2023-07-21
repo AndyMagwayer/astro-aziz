@@ -1,21 +1,144 @@
 ---
 import featuredImage from "../../assets/images/white-concrete-building-1838640.png"
+import TheButton from "../the-button.astro";
 ---
 
 <section class="posts">
-    <div class="container">
+    <div class="container wrapper">
         <!-- left -->
         <div class="featured-post">
             <h2 class="title">Feautered Post</h2>
             <div class="block-card">
                 <img src={featuredImage} alt="image" class="card-image">
-                   
+                   <p class="info">By <a href="">John Doe</a>   l   May 23, 2022</p>
+                   <h3 class="card-title">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</h3>
+                   <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>
+                   <TheButton>
+                   <span> Read More </span>
+                   <i class="fas fa-chevron-right"></i>
+                </TheButton>
+
             </div>
         </div>
          
 
 
         <!-- the right -->
-        <div class="all-posts"></div>
+        <div class="all-posts">
+            <div class="title-wrapper">
+              <h2 class="title">All Posts</h2>
+              <a href="" class="title-link">View All</a>
+            </div>
+
+              <ul class="posts-list">
+                <!-- item -->
+                <li class="post-item">
+                   <p class="info">By John Deo   l   Aug 23, 2021 </p>
+                   <h4>8 Figma design systems that you can download for free today.</h4>
+                </li>
+
+                <!-- item -->
+                <li class="post-item">
+                    <p class="info">By John Deo   l   Aug 23, 2021 </p>
+                    <h4>8 Figma design systems that you can download for free today.</h4>
+                </li>
+                
+                <!-- item -->
+                <li class="post-item">
+                    <p class="info">By John Deo   l   Aug 23, 2021 </p>
+                    <h4>8 Figma design systems that you can download for free today.</h4>
+                </li>
+
+                  <!-- item -->
+                <li class="post-item">
+                    <p class="info">By John Deo   l   Aug 23, 2021 </p>
+                    <h4>8 Figma design systems that you can download for free today.</h4>
+                 </li>
+              </ul>
+        </div>
     </div>
 </section>
+
+<style lang="scss">
+ @import "../../assets/styles/variables.scss";
+    .posts{
+       padding: 128px 0;
+
+      .wrapper{
+            display: flex;
+            gap: 32px;
+
+            .info{
+                font-size: $text-small;
+                color: $gray-500 ;
+
+                a{
+                    color: $accent;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+            }
+
+
+            .featured-post{
+                 max-width: 733px;  
+
+                .block-card{
+                    margin-top: 32px;
+                    border: 1px solid rgb(245, 244, 244) ;
+                  
+                       
+
+                    .card-image{
+                        width: 100%;
+                    }
+
+                    .card-title{
+                        line-height: 40px;
+                        margin: 16px 0;
+                    }
+
+                    .description{
+                        color: $gray-400;
+                        line-height: 28px;
+                        margin-bottom: 32px;
+                    }
+
+                }
+            }
+
+
+            .all-posts{
+                .title-wrapper{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    margin-bottom: 32px;
+
+
+                    .title-link{
+                        color: $accent;
+
+
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }
+
+                }
+
+
+                .post-item{
+                    padding: 32px;
+                    cursor: pointer;
+
+
+                    &:hover{
+                        background-color: $light;
+                    }
+                }
+            }
+      }
+    }
+</style>
