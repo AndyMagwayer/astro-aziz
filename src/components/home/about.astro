@@ -1,0 +1,118 @@
+---
+---
+
+<section class="about">
+  <div class="container wrapper">
+    <!-- left -->
+    <div class="about-us">
+      <div class="top-title">ABOUT US</div>
+      <h2 class="title">
+        We are a community of content writers who share their learnings
+      </h2>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </p>
+      <a href="" class="link">
+        <span>Read More</span>
+        <i class="fas fa-chevron-right"></i>
+      </a>
+    </div>
+
+    <!-- right -->
+    <div class="our-mission">
+      <div class="top-title">Our mision</div>
+      <h3 class="title">
+        Creating valuable content for creatives all around the world
+      </h3>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+        veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+        commodo consequat.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../assets/styles/variables.scss";
+
+  .about {
+    padding-bottom: 128px;
+   
+
+
+
+    .wrapper {
+      background-color: $gray-200;
+      padding: 96px 80px;
+      display: flex;
+      gap: 82px;
+      position: relative;
+
+      &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: -23px;
+      width: 282px;
+      height: 23px;
+      background-color: $accent;
+
+    }
+
+    &::before{
+      content: "";
+      position: absolute;
+      right: 218px;
+      top: -23px;
+      width: 843px;
+      height: 23px;
+      background-color: $primary;
+    }
+
+
+      .top-title {
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        margin-bottom: 24px;
+      }
+
+      .text {
+        color: $gray-400;
+      }
+
+      .about-us {
+        width: 50%;
+
+        .title {
+          line-height: 48px;
+          margin-bottom: 16px;
+        }
+
+        .link {
+          font-size: 18px;
+          color: $accent;
+          font-weight: 700;
+          margin-top: 16px;
+          cursor: pointer;
+
+          &:hover {
+            color: $primary;
+            text-decoration: underline;
+          }
+        }
+      }
+
+      .our-mission {
+        width: 50%;
+
+        .title {
+          line-height: 40px;
+          margin-bottom: 16px;
+        }
+      }
+    }
+  }
+</style>
