@@ -1,0 +1,87 @@
+---
+import bgimage from "../../assets/images/bg-image-started.png";
+---
+
+<section class="why-we-started">
+  <div class="container wrapper">
+    <div class="block">
+      <!-- left -->
+      <div class="left">
+        <img src={bgimage} alt="bgimage" />
+      </div>
+
+      <!-- right -->
+      <div class="right">
+        <div class="top-title">Why we started</div>
+        <h2 class="title">
+          It started out as a simple idea and evolved into our passion
+        </h2>
+        <p class="text">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip.
+        </p>
+        <button>
+          <span>Read More</span>
+          <i class="fas fa-chevron-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../assets/styles/variables.scss";
+
+  .why-we-started {
+    padding-bottom: 128px;
+
+
+    .container {
+      background-color: #fff;
+      width: 1440px;
+height: 5996px;
+
+      .block {
+        display: flex;
+
+        .left {
+          width: 949px;
+          flex-shrink: 0;
+         
+
+
+        }
+
+
+        .right{
+            background-color: #fff;
+            width: 94px;
+            padding: 80px;
+
+            .top-title{
+                font-weight: 600;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                margin-bottom: 24px;
+
+
+            }
+
+
+            .title{
+               line-height: 64px;
+            }
+
+            .text{
+                color: $gray-400;
+                line-height: 28px;
+                margin: 16px 32px;
+
+            }
+        }
+      }
+    }
+  }
+</style>
