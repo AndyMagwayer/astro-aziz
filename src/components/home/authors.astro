@@ -1,5 +1,10 @@
 ---
 import author1 from "../../assets/images/author1.png"
+import author2 from "../../assets/images/author2.png"
+import author3 from "../../assets/images/author3.png"
+import author4 from "../../assets/images/author4.png"
+
+
 ---
 
 <section class="authors">
@@ -30,6 +35,79 @@ import author1 from "../../assets/images/author1.png"
                 </a>
             </div>
         </div>
+
+            <!-- cards -->
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src={author2} alt="image" class="image">
+                </div>
+    
+                <h3 class="name">Dianne Russell</h3>
+                <p class="bio">Content Writer @Company</p>
+                <div class="sci">
+                    <a href="" class="sci-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
+                <!-- cards -->
+        <div class="card">
+            <div class="image-wrapper">
+                <img src={author3} alt="image" class="image">
+            </div>
+
+            <h3 class="name">Jenny Wilson</h3>
+            <p class="bio">Content Writer @Company</p>
+            <div class="sci">
+                <a href="" class="sci-link">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="" class="sci-link">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="" class="sci-link">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="" class="sci-link">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </div>
+        </div>
+
+            <!-- cards -->
+            <div class="card">
+                <div class="image-wrapper">
+                    <img src={author4} alt="image" class="image">
+                </div>
+    
+                <h3 class="name">Leslie Alexander</h3>
+                <p class="bio">Content Writer @Company</p>
+                <div class="sci">
+                    <a href="" class="sci-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="" class="sci-link">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+
         </div>
 
     </div>
@@ -42,6 +120,51 @@ import author1 from "../../assets/images/author1.png"
      @import "../../assets/styles/variables.scss";
 
      .authors{
-        
+        padding-bottom: 100px;
+
+        .title{
+            text-align: center;
+            margin-bottom: 50px;
+
+
+        }
+
+        .wrapper{
+                display: flex;
+                justify-content: space-between;
+                gap: 30px;
+
+                .card{
+                    width: 296px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    background-color: $gray-200;
+                    padding: 40px 0;
+                    cursor: pointer;
+
+                    &:hover{
+                        background-color: $light;
+                    }
+
+                    .name{
+                        margin-top: 20px;
+                    }
+
+                    .bio{
+                        margin-bottom: 20px;
+                        color: $gray-400;
+                        font-size: $text-small;
+
+                    }
+
+                    .sci{
+                        display: flex;
+                        gap: 16px;
+
+                    }
+                }
+        }
      }
 </style>
