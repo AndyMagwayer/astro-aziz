@@ -1,0 +1,149 @@
+---
+import Usericon from "../../assets/images/jonathan-profile-picture.png";
+---
+
+<section class="testimonials">
+  <div class="container wrapper">
+    <!-- left -->
+    <div class="people-say">
+      <p class="top-title">Testimonials</p>
+      <h2 class="title">What people say about our blog</h2>
+      <p class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor.
+      </p>
+    </div>
+
+    <div class="line"></div>
+
+    <!-- right -->
+    <div class="content">
+      <h4 class="text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua.
+      </h4>
+
+      <div class="user">
+        <!-- info -->
+        <div class="info">
+          <img src={Usericon} alt="image-user" />
+          <div class="bio">
+            <h4 class="name">Jonathan Vallem</h4>
+            <p class="country">New york, USA</p>
+          </div>
+        </div>
+
+        <!-- arrows -->
+        <div class="action">
+          <button class="prev">
+            <i class="fas fa-arrow-left"></i>
+          </button>
+          <button class="next">
+            <i class="fas fa-arrow-right"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../assets/styles/variables.scss";
+
+  .testimonials {
+    padding-bottom: 128px;
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      background-color: $light;
+      padding: 80px 110px;
+
+      .line {
+        width: 1px;
+        height: 310px;
+        background-color: $gray-400;
+        margin: 0 85px;
+      }
+
+      .people-say {
+        .top-title {
+          text-transform: uppercase;
+          letter-spacing: 3px;
+          margin-bottom: 12px;
+        }
+
+        .title {
+          line-height: 48px;
+          margin-bottom: 16px;
+        }
+
+        .text {
+          color: $gray-400;
+        }
+      }
+
+      .content {
+        .text{
+            width: 470px;
+            line-height: 32px;
+        }
+        .user {
+          margin-top: 120px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .info{
+            display: flex;
+            gap: 16px;
+
+            .country{
+                color: $gray-400;
+            }
+            
+          }
+
+          .action{
+            display: flex;
+            align-items: center;
+            gap: 24px;
+
+
+            .prev{
+                color: #000 ;
+                width: 48px;
+                height: 48px;
+                background: #fff;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover{
+                    background-color: #000;
+                    color: #fff;
+                }
+            }
+
+            
+            .next{
+                color: #fff ;
+                width: 62px;
+                height: 62px;
+                background: #000;
+                border-radius: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                &:hover{
+                    background-color: $light;
+                    color: #000;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
