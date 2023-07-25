@@ -1,0 +1,116 @@
+---
+import bgimage from "../../assets/images/bg-image-started.png";
+import bgimage1 from "../../assets/images/main.bg.png";
+import TheButton from "../the-button.astro";
+---
+
+<section class="why-we-started">
+  <div class="wrapper">
+    <img src={bgimage1} alt="" class="image" />
+    <div class="container">
+      <div class="layer">
+        <!-- left -->
+        <div class="image"></div>
+
+        <!-- right -->
+
+        <div class="actions">
+          <div class="title">Why we started</div>
+          <p class="text">
+            It started out as a simple idea and evolved into our passion
+          </p>
+          <p class="description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+            aliquip.
+          </p>
+
+          <TheButton>
+            <span>Discover our story ></span>
+          </TheButton>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style lang="scss">
+  @import "../../assets/styles/variables.scss";
+
+  .why-we-started {
+    padding: 128px;
+    padding-left: 80px;
+
+    .wrapper {
+      display: flex;
+      .image {
+        border-image-width: 949px;
+      }
+    }
+  }
+
+  .container {
+    background-color: #fff;
+
+    .layer {
+      display: flex;
+      background-color: #fff;
+      padding-bottom: 1px;
+      margin-top: 121px;
+      width: 706px;
+      height: 584px;
+
+      .actions {
+        padding-left: 80px;
+        .title {
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px; /* 125% */
+          letter-spacing: 3px;
+          text-transform: uppercase;
+          color: #232536;
+          padding-top: 80px;
+          padding-left: 80px;
+        }
+
+        .text {
+          padding-top: 24px;
+          padding-left: 80px;
+          font-family: Sen;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 64px; /* 133.333% */
+          letter-spacing: -2px;
+
+          color: var(--black, #232536);
+        }
+
+        .description {
+          padding-top: 16px;
+          padding-left: 80px;
+          color: var(--medium-grey, #6d6e76);
+          /* Body 1 */
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 28px; /* 175% */
+        }
+
+        span {
+          color: var(--black, #232536);
+          font-family: Sen;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px; /* 133.333% */
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+</style>
